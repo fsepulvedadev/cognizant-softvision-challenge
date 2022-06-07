@@ -1,11 +1,21 @@
 [{
-  "id": "goncy",
+  "id": "1",
   "name": "Gonzalo Pozzo",
   "step": "Entrevista técnica",
   "comments": "Medio pelo"
 }, {
-  "id": "doe",
+  "id": "2",
   "name": "John Doe",
   "step": "Entrevista inicial",
-  "comments": ""
+  "comments": "Teamworker"
+}, {
+  "id": "3",
+  "name": "Charlie Wonka",
+  "step": "Oferta",
+  "comments": "Principiante"
+}, {
+  "id": "4",
+  "name": "Juana Perez",
+  "step": "Rechazo",
+  "comments": "Sobre calificada"
 }]
