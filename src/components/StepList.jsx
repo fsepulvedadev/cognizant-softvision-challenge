@@ -151,14 +151,14 @@ const StepList = () => {
 
   useEffect(() => {
     process.env.NODE_ENV
-      ? clasificarCandidatos(data)
-      : fetch("src/api/candidates.json", {
+      ? fetch("src/api/candidates.json", {
           headers: {"Content-Type": "application/json", Accept: "application/json"},
         })
           .then((res) => res.json())
           .then((data) => {
             clasificarCandidatos(data);
-          });
+          })
+      : clasificarCandidatos(data);
   }, []);
 
   return (
