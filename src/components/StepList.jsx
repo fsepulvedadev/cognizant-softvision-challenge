@@ -19,8 +19,6 @@ const StepList = () => {
 
       let allCandidates = [...stepOne, ...stepTwo, ...stepTree, ...stepFour, ...stepFive];
 
-      console.log(allCandidates);
-
       const repetidos = allCandidates.find((candidate) => candidate.id === id);
 
       console.log(repetidos);
@@ -150,32 +148,13 @@ const StepList = () => {
   };
 
   useEffect(() => {
-    fetch("src/api/candidates.json")
+    fetch("./src/api/candidates.json")
       .then((res) => res.json())
       .then((data) => {
-        /*  let PrevCandidatos = JSON.parse(localStorage.getItem("candidatos"));
-        let newCandidatos = [...PrevCandidatos, ...data];
-
-        localStorage.setItem("candidatos", JSON.stringify(newCandidatos));
-        let candidatos = JSON.parse(localStorage.getItem("candidatos")); */
-
         clasificarCandidatos(data);
       });
   }, []);
 
-  /* useEffect(() => {
-    setAllCandidates((allCandidates) => [
-      ...allCandidates,
-      ...stepOne,
-      ...stepTwo,
-      ...stepTree,
-      ...stepFour,
-      ...stepFive,
-    ]);
-
-    localStorage.setItem("candidatos", JSON.stringify(allCandidates));
-  }, [stepOne, stepTwo, stepTree, stepFour, stepFive]);
- */
   return (
     <>
       {showModal && <NewCandidate addCandidate={addCandidate} changeModal={changeModal} />}
