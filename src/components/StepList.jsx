@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 
+import data from "../api/candidates.json";
+
 import Step from "./Step";
 import Candidate from "./Candidate";
 import NewCandidate from "./NewCandidate";
@@ -148,12 +150,15 @@ const StepList = () => {
   };
 
   useEffect(() => {
-    fetch("api/candidates.json")
-      .then((res) => res.json())
-      .then((data) => {
-        clasificarCandidatos(data);
-        console.log("datos recibidos", data);
-      });
+    process.env.NODE_ENV
+      ? clasificarCandidatos(data)
+      : fetch("src/api/candidates.json", {
+          headers: {"Content-Type": "application/json", Accept: "application/json"},
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            clasificarCandidatos(data);
+          });
   }, []);
 
   return (
