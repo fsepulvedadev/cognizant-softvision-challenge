@@ -1,6 +1,6 @@
 import React from "react";
 
-import StepList from "../components/StepList";
+import StepList from "../components/StepList.jsx";
 
 function App() {
   return (

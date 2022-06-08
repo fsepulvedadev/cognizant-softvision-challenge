@@ -18,4 +18,14 @@
   "name": "Juana Perez",
   "step": "Rechazo",
   "comments": "Sobre calificada"
+}, {
+  "id": "5",
+  "name": "Carlos gomez",
+  "step": "Rechazo",
+  "comments": "Genio"
+}, {
+  "id": "6",
+  "name": "Rodrigo Noya",
+  "step": "Rechazo",
+  "comments": "Hijo del Jefe"
 }]
