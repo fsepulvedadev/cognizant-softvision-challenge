@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from "react";
 
-import data from "../api/candidates.json";
-
 import Step from "./Step";
 import Candidate from "./Candidate";
 import NewCandidate from "./NewCandidate";
@@ -15,7 +13,44 @@ const StepList = () => {
   const [stepFive, setStepFive] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
-  console.log(process.env.NODE_ENV);
+  const data = [
+    {
+      id: "1",
+      name: "Gonzalo Pozzo",
+      step: "Entrevista técnica",
+      comments: "Medio pelo",
+    },
+    {
+      id: "2",
+      name: "John Doe",
+      step: "Entrevista inicial",
+      comments: "Teamworker",
+    },
+    {
+      id: "3",
+      name: "Charlie Wonka",
+      step: "Oferta",
+      comments: "Principiante",
+    },
+    {
+      id: "4",
+      name: "Juana Perez",
+      step: "Rechazo",
+      comments: "Sobre calificada",
+    },
+    {
+      id: "5",
+      name: "Carlos gomez",
+      step: "Rechazo",
+      comments: "Genio",
+    },
+    {
+      id: "6",
+      name: "Rodrigo Noya",
+      step: "Rechazo",
+      comments: "Hijo del Jefe",
+    },
+  ];
 
   const clasificarCandidatos = (candidatos) => {
     candidatos.forEach((candidato) => {
