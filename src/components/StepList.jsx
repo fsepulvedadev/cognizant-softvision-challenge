@@ -15,6 +15,8 @@ const StepList = () => {
   const [stepFive, setStepFive] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
+  console.log(process.env.NODE_ENV);
+
   const clasificarCandidatos = (candidatos) => {
     candidatos.forEach((candidato) => {
       const {step, id} = candidato;
