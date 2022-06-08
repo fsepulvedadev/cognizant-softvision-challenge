@@ -187,7 +187,7 @@ const StepList = () => {
   };
 
   useEffect(() => {
-    process.env.NODE_ENV
+    /* process.env.NODE_ENV
       ? fetch("src/api/candidates.json", {
           headers: {"Content-Type": "application/json", Accept: "application/json"},
         })
@@ -195,7 +195,8 @@ const StepList = () => {
           .then((data) => {
             clasificarCandidatos(data);
           })
-      : clasificarCandidatos(data);
+      : clasificarCandidatos(data); */
+    clasificarCandidatos(data);
   }, []);
 
   return (
