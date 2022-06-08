@@ -1,4 +1,4 @@
-import {Candidate} from "../types/candidate";
+import {Candidate} from "../src/types/candidate";
 
 export default {
   candidates: {

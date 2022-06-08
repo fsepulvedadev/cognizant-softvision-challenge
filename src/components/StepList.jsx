@@ -148,7 +148,7 @@ const StepList = () => {
   };
 
   useEffect(() => {
-    fetch("./src/api/candidates.json")
+    fetch("api/candidates.json")
       .then((res) => res.json())
       .then((data) => {
         clasificarCandidatos(data);
