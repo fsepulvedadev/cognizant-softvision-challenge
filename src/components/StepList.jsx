@@ -152,6 +152,7 @@ const StepList = () => {
       .then((res) => res.json())
       .then((data) => {
         clasificarCandidatos(data);
+        console.log("datos recibidos", data);
       });
   }, []);
 
